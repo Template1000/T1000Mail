@@ -6,6 +6,7 @@ const { config } = require('./config/config')
 const { logError, boomErrorHandler, errorHandler } = require('./middleware/error.handler')
 
 const app = express()
+const port = config.port
 
 app.use(express.json())
 
@@ -31,3 +32,7 @@ routerApi(app)
 app.use(logError)
 app.use(boomErrorHandler)
 app.use(errorHandler)
+
+app.listen(port, () => {
+  // console.log(`Mi port ${port}`);
+})
