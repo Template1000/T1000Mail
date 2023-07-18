@@ -5,9 +5,9 @@ const { config } = require('../config/config')
 class MailService {
   async sendMail(infoName, infoMail, infoPhone, infoMessage) {
     const transporter = nodemailer.createTransport({
-      host: 'smtp.ethereal.email',
-      secure: false,
-      port: 587,
+      host: 'smtp.gmail.com',
+      secure: true,
+      port: 465,
       auth: {
         user: config.smtpEmail,
         pass: config.smtpPassword
