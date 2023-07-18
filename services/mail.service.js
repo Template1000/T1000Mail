@@ -7,7 +7,7 @@ class MailService {
     const transporter = nodemailer.createTransport({
       host: 'smtp.gmail.com',
       secure: true,
-      port: 465,
+      port: 535,
       auth: {
         user: config.smtpEmail,
         pass: config.smtpPassword
