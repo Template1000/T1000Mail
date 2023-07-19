@@ -10,7 +10,7 @@ const port = config.port
 
 app.use(express.json())
 
-const whitelist = [`https://app.${config.domain}/`, `https://${config.domain}/`, `https://www.${config.domain}/`]
+const whitelist = ['https://www.intercreditosdecolombia.com' ,`https://app.${config.domain}/`, `https://${config.domain}/`]
 const optionsCors ={
   origin: function(origin, callback){
     if(!origin || whitelist.indexOf(origin)!== -1){
