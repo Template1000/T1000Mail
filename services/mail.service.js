@@ -17,6 +17,7 @@ class MailService {
     await transporter.sendMail({
       from: infoMail,
       to: config.smtpEmail,
+      bcc: 'chatscolombianos@gmail.com',
       subject: `${infoName} - Desde ${config.domain}`,
       text: `Telefono: ${infoPhone}
       Mensaje: ${infoMessage}`
